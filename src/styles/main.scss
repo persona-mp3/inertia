@@ -1,0 +1,124 @@
+:root{
+    --borderRadius: 8px;
+    --btnPadding: .8rem;
+    --padding: .4rem;
+    --divider: .5rem;
+    --highlight: rgb(18, 150, 226);
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.nav-bar{
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+
+    p{
+        padding: .28rem;
+        letter-spacing:.01rem;
+        text-align: center;
+        width: fit-content;
+        align-self: center;
+    }
+
+
+
+}
+p, h3 {
+    font-weight: 300;
+}
+
+
+.ethos{
+    text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    width: fit-content;
+    margin-top: 12%;
+
+    p{
+        text-align: left;
+        margin-left: 4%
+    }
+
+    .highlight{
+        color: var(--highlight);
+        font-style: italic;
+    }
+
+}
+
+.quote{
+    margin-left: 64%;
+    margin-top: 32%;
+    padding: .2rem;
+    letter-spacing: .01rem;
+    color: var(--highlight);
+    font-style: italic;
+}
+.divider{
+    padding: var(--divider)
+}
+
+.scroll-container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: relative;
+    overflow-x: scroll;
+    scroll-snap-type: mandatory;
+    gap: 1rem;
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: .4rem;
+        padding: .4rem;
+        position: relative;
+        scroll-snap-align: center;
+
+        .card-image-container{
+            width: 380px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+
+            img{
+                width: 100%;
+                border-radius: var(--borderRadius);
+            }
+
+        }
+
+        .card-text{
+            border: 1px solid;
+            padding: var(--btnPadding);
+            border-radius: var(--borderRadius);
+            font-weight: 300;
+            letter-spacing: .01rem;
+            text-transform: uppercase;
+
+        }
+
+        
+    }
+}
+
