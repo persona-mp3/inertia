@@ -152,6 +152,20 @@ p, h3 {
 }
 
 
+@mixin CardImageContainer{
+    width: 380px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+@mixin CardImg{
+    width: 100%;
+    border-radius: var(--borderRadius);
+}
+
 
 #form{
     margin-top: 4%;
@@ -195,4 +209,27 @@ p, h3 {
     align-self: center;
     padding: .24rem;
     text-align: center;
+
+}
+
+.render-image-container {
+    @include CardImageContainer()
+}
+
+.render-img{
+    @include CardImg()
+}
+
+.render-reviews {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border-top: var(--borderGrey);
+    margin-top: 5%;
+}
+
+.render-reviews *{
+    font-weight: bold;
 }

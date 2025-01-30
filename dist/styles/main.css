@@ -174,4 +174,31 @@ p, h3 {
   text-align: center;
 }
 
+.render-image-container {
+  width: 380px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.render-img {
+  width: 100%;
+  border-radius: var(--borderRadius);
+}
+
+.render-reviews {
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  border-top: var(--borderGrey);
+  margin-top: 5%;
+}
+
+.render-reviews * {
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=main.css.map */
