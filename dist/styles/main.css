@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --borderRadius: 8px;
-  --btnPadding: .8rem;
+  --btnPadding: .7rem;
   --padding: .4rem;
   --divider: .5rem;
   --highlight: rgb(18, 150, 226);
+  --gap: .4rem;
+  --borderGrey: 1px solid grey;
 }
 
 body {
@@ -103,6 +105,73 @@ p, h3 {
   font-weight: 300;
   letter-spacing: 0.01rem;
   text-transform: uppercase;
+}
+
+#form {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding);
+  gap: calc(var(--gap) * 2);
+}
+#form input {
+  all: unset;
+  border: 1px solid;
+  padding: calc(var(--padding));
+  border-radius: 4px;
+  color: black;
+  font-weight: 5l00;
+  padding-left: 0.24rem;
+}
+#form button {
+  all: unset;
+  padding: var(--btnPadding);
+  text-align: center;
+  border: 1px solid grey;
+  border-radius: var(--borderRadius);
+}
+
+#movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding);
+  gap: calc(var(--gap) * 2);
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding);
+  gap: calc(var(--gap) * 2);
+  gap: 0.8rem;
+}
+
+.render {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding);
+  gap: calc(var(--gap) * 2);
+  border: 1px solid grey;
+  border-radius: var(--borderRadius);
+  gap: 0.04rem;
+}
+
+.render-title {
+  text-align: center;
+  align-self: center;
+  padding-bottom: var(--padding);
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+
+.render-overview {
+  align-self: center;
+  padding: 0.24rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,9 +1,11 @@
 :root{
     --borderRadius: 8px;
-    --btnPadding: .8rem;
+    --btnPadding: .7rem;
     --padding: .4rem;
     --divider: .5rem;
     --highlight: rgb(18, 150, 226);
+    --gap: .4rem;
+    --borderGrey: 1px solid grey;
 }
 
 
@@ -16,7 +18,7 @@ body{
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
-    position: relative;
+    position: relative; 
 }
 
 .nav-bar{
@@ -122,3 +124,75 @@ p, h3 {
     }
 }
 
+@mixin flexStyle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--padding);
+    gap: calc(var(--gap) * 2);
+}
+
+
+@mixin ButtonComponent {
+    all: unset;
+    padding: var(--btnPadding);
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: var(--borderRadius);
+}
+
+@mixin InputComponent {
+    all: unset;
+    border: 1px solid;
+    padding: calc(var(--padding));
+    border-radius: 4px;
+    color: black;
+    font-weight: 5l00;
+    padding-left: .24rem;
+}
+
+
+
+#form{
+    margin-top: 4%;
+    @include flexStyle();
+
+
+    input{
+        @include InputComponent()
+    }
+
+    button{
+        @include ButtonComponent()
+    }
+}
+
+#movies{
+    @include flexStyle()
+}
+
+.placeholder{
+    @include flexStyle();
+    gap: .8rem;
+}
+
+.render{
+    @include flexStyle();
+    border: 1px solid grey;
+    border-radius: var(--borderRadius);
+    gap: .04rem;
+}
+
+.render-title {
+    text-align: center;
+    align-self: center;
+    padding-bottom: var(--padding);
+    border-bottom: 1px solid grey;
+    width: 100%;
+
+}
+.render-overview {
+    align-self: center;
+    padding: .24rem;
+    text-align: center;
+}
